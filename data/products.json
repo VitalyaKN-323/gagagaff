@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "title": "Банан",
+        "price": "20",
+        "discount": "5",
+        "img": "banana.webp",
+        "descr": "Банан як банан що тут сказати.",
+        "category": "Фрукти",
+        "expiry_date": "5 днів",
+        "manufacturer": "Ферма 'Сонячне Лукошко'",
+        "composition": "100% банани"
+    },
+    {
+        "id": 2,
+        "title": "Яблуко",
+        "price": "15",
+        "discount": "15",
+        "img": "yabko.webp",
+        "descr": "Яблуко(зелене)",
+        "category": "Фрукти",
+        "expiry_date": "7 днів",
+        "manufacturer": "Органічні ферми Зелений Сад",
+        "composition": "Яблука веганського виробництва"
+    },
+    {
+        "id": 3,
+        "title": "Молоко",
+        "price": "25",
+        "discount": "5",
+        "img": "Milk.webp",
+        "descr": "Молоко 3.2% жиру",
+        "category": "Молочка",
+        "expiry_date": "10 днів",
+        "manufacturer": "Кооператив 'Молочна Родина'",
+        "composition": "Молоко, стабілізатори"
+    },
+    {
+        "id": 4,
+        "title": "Хліб",
+        "price": "21",
+        "discount": "50",
+        "img": "Bread.webp",
+        "descr": "Хліб(білий пшеничний)",
+        "category": "Випічка",
+        "expiry_date": "3 дні",
+        "manufacturer": "Пекарня 'Смачний кущ'",
+        "composition": "Пшеничне борошно, вода, дріжжі, сіль"
+    },
+    {
+        "id": 5,
+        "title": "Живчик",
+        "price": "40",
+        "discount": "30",
+        "img": "aple.webp",
+        "descr": "Солодка водичка - Живчик",
+        "category": "Напої",
+        "expiry_date": "30 днів",
+        "manufacturer": "'Очищена Смаковитість'",
+        "composition": "Вода, цукор, ароматизатори"
+    },
+    {
+        "id": 6,
+        "title": "Філe кур'яче",
+        "price": "138",
+        "discount": "10",
+        "img": "chike.webp",
+        "descr": "Грудка куряча",
+        "category": "М'ясо",
+        "expiry_date": "5 днів",
+        "manufacturer": "Ферма 'Смачна Курочка'",
+        "composition": "М'ясо курки"
+    },
+    {
+        "id": 7,
+        "title": "Апельсиновий сік",
+        "price": "10",
+        "discount": "2",
+        "img": "apelsinshake.webp",
+        "descr": "Апельсиновий сік",
+        "category": "Напої",
+        "expiry_date": "7 днів",
+        "manufacturer": "Фабрика 'Соковиті Квіти'",
+        "composition": "Сок з апельсинів, вода, цукор"
+    },
+    {
+        "id": 8,
+        "title": "Сир",
+        "price": "59",
+        "discount": "5",
+        "img": "sirr.webp",
+        "descr": "Сир пористий",
+        "category": "Молочка",
+        "expiry_date": "14 днів",
+        "manufacturer": "Сирна Ферма 'Пухнасті обійми'",
+        "composition": "Молоко, закваска, сіль"
+    },
+    {
+        "id": 9,
+        "title": "Помідор",
+        "price": "10",
+        "discount": "5",
+        "img": "tomato.webp",
+        "descr": "Помідор соковитий квасни)))))",
+        "category": "Овочі",
+        "expiry_date": "5 днів",
+        "manufacturer": "Сади'Сонячний урожай'",
+        "composition": "Органічного виробництва"
+    },
+    {
+        "id": 10,
+        "title": "Огірок",
+        "price": "8",
+        "discount": "0",
+        "img": "Gg.webp",
+        "descr": "Ну огірок нічо більше.",
+        "category": "Овочі",
+        "expiry_date": "7 днів",
+        "manufacturer": "Органічні городи 'Зелений дім'",
+        "composition": "Огірки без ГМО"
+    },
+    {
+        "id": 11,
+        "title": "Суші",
+        "price": "200",
+        "discount": "4",
+        "img": "susi.webp",
+        "descr": "Суші з лососем 300грам.",
+        "category": "Готові страви",
+        "expiry_date": "1 день",
+        "manufacturer": "Ресторан 'Смачні Суші'",
+        "composition": "Рис, лосось, норі, соєвий соус"
+    },
+    {
+        
+            "id": 12,
+            "title": "Віскі",
+            "price": "3500",
+            "discount": "15",
+            "img": "VISKI.webp",
+            "descr": "Віскі",
+            "category": "Алкоголь",
+            "expiry_date": "Необмежений",
+            "manufacturer": "'Джентльменська Традиція'",
+            "composition": "Зі спеціально відібраних зерен-Віскі."
+        
+        
+        
+    }
+]
+
+
