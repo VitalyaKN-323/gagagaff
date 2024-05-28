@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="stylesauto.css"> <!-- Підключіть ваш файл стилів, якщо потрібно -->
+</head>
+<body>
+    <div class="container">
+        <h2>Авторизація</h2>
+        <button class="auth-button" onclick="loginAsUser()">Увійти як користувач</button>
+        <button class="auth-button" onclick="loginAsAdmin()">Увійти як адміністратор</button>
+    </div>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .auth-button {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 10px auto;
+            padding: 20px; /* Збільшуємо розмір кнопки */
+            font-weight: bold; /* Збільшуємо жирність шрифту */
+            font-size: 20px; /* Збільшуємо розмір шрифту */
+            color: white; /* Змінюємо колір тексту на білий */
+            border: none; /* Забираємо бордер */
+            border-radius: 4px;
+            cursor: pointer; 
+            transition: 0.2s;
+            background-color: #0c7552; /* Змінюємо фон на зелений */
+        }
+
+        .auth-button:hover {
+            background-color: #0f835c; /* Змінюємо колір фону при наведенні */
+        }
+    </style>
+
+    <script>
+        function loginAsUser() {
+            window.location.href = "userindex.html"; // Перенаправляємо на сторінку для користувача
+        }
+
+        function loginAsAdmin() {
+            const username = prompt("Enter your username:");
+            const password = prompt("Enter your password:");
+
+            if (username === "VitalyaKN" && password === "02042006") {
+                window.location.href = "adminindex.html"; // Перенаправляємо на сторінку для адміна
+            } else {
+                alert("Incorrect username or password"); // Повідомлення про неправильний логін або пароль
+            }
+        }
+    </script>
+</body>
+</html>

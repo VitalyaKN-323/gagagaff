@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i.ibb.co/PjjXMv7/icona.jpg">
+    <title>Food-Store</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="./js/adminsndex.js" type="module" defer></script>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="logo">
+            <a href="/" class="logo-link">
+                <img src="https://i.ibb.co/6NDs5jQ/FS.png" alt="Логотип сайту" class="logo-img">
+            </a>
+        </div>
+        
+        <h1>Товари харчування Food-Store</h1>
+         <!-- Додано поле пошуку -->
+ <div class="searchInput">
+    <div class="icona"></div>
+    <div class="input">
+        <input type="text" id="searchInput" placeholder="Пошук...">
+    </div>
+</div>
+        <div class="cards"></div>
+        <button class="show-cards none">Показати ще</button>
+        <button class="card__edit" data-id="1">Редагувати</button>
+
+        <a class="home" href="/">
+            <svg width="45" height="45" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.98 1.984l7 6h-2.003v6H9.96V10.97H5.997v3.016H2.982v-6H.979l7-6z" fill="#000"></path>
+            </svg>
+        </a>
+    </div>
+ <!-- Модальне вікно -->
+ <div class="modal">
+    <div class="modal-content">
+        <span class="close-order-modal">&times;</span>
+        <!-- Форма для вводу id товару -->
+        <h2>Редагувати товар</h2>
+        <form id="editForm">
+            <label for="productId">ID товару:</label>
+            <input type="text" id="productId" name="productId" required>
+            <button type="submit">Редагувати</button>
+        </form>
+    </div>
+</div>
+    <!-- Друге модальне вікно -->
+    <div class="second-modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-second-modal">&times;</span>
+            <h2>Редагувати деталі товару</h2>
+            <form id="editDetailsForm">
+                <label for="productTitle">Назва:</label>
+                <input type="text" id="productTitle" name="productTitle" required>
+                <label for="productPrice">Ціна:</label>
+                <input type="number" id="productPrice" name="productPrice" required>
+                <label for="productDiscount">Знижка:</label>
+                <input type="number" id="productDiscount" name="productDiscount" required>
+                <label for="productCategory">Категорія:</label>
+                <input type="text" id="productCategory" name="productCategory" required>
+                <label for="productExpiry">Термін придатності:</label>
+                <input type="text" id="productExpiry" name="productExpiry" required>
+                <label for="productManufacturer">Виробник:</label>
+                <input type="text" id="productManufacturer" name="productManufacturer" required>
+                <label for="productComposition">Склад:</label>
+                <input type="text" id="productComposition" name="productComposition" required>
+                <button type="submit">Зберегти</button>
+            </form>
+        </div>
+    </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const editButton = document.querySelector('.card__edit');
+        const modal = document.querySelector('.modal');
+        const closeBtn = document.querySelector('.close-order-modal');
+        const productIdInput = document.getElementById('productId');
+        const openSecondModalBtn = document.querySelector('.open-second-modal');
+        const secondModal = document.querySelector('.second-modal');
+        const closeSecondModalBtn = document.querySelector('.close-second-modal');
+
+        editButton.addEventListener('click', () => {
+            modal.style.display = 'block';
+            const productId = editButton.getAttribute('data-id');
+            productIdInput.value = productId;
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        openSecondModalBtn.addEventListener('click', () => {
+            secondModal.style.display = 'block';
+        });
+
+        closeSecondModalBtn.addEventListener('click', () => {
+            secondModal.style.display = 'none';
+        });
+    });
+</script>
+    <footer style="font-family: Arial, Helvetica, sans-serif; text-align: center; padding: 10px 0;">
+    Виникли питання?  0682234294
+        Дзвоніть по номеру телефону:)
+    </footer>
+</body>
+</html>
