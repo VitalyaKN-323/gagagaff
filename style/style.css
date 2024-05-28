@@ -1,0 +1,442 @@
+@import url('./reset.css');
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    border: 5px solid;
+    border-image: linear-gradient(135deg, #70c05b, #2e8540) 1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 225px);
+    width: 100%;
+    max-width: 1000px; 
+    justify-content: center;
+    justify-items: center; 
+    column-gap: 30px;
+    row-gap: 40px; 
+    margin: 60px auto;
+}
+
+.card {
+    width: 250px;
+    min-height: 350px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    transition: 0.2s;
+    position: relative;
+    padding: 10px;
+}
+
+.card:hover {
+    box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+}
+
+.card__top {
+    flex: 0 0 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card__image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card__image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.2s;
+}
+
+.card__image:hover > img {
+    transform: scale(1.1);
+}
+
+.card__label {
+    padding: 4px 8px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: #ff6633;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+}
+
+.card__bottom {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    padding: 5px;
+    
+}
+
+.card__prices {
+    display: flex;
+    margin-bottom: 10px;
+    flex: 0 0 50%;
+}
+
+.card__price::after {
+    content: "ГРН";
+    margin-left: 4px;
+    position: relative;
+}
+
+.card__price--discount {
+    font-weight: 700;
+    font-size: 19px;
+    color: #414141;
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+.card__price--discount::before {
+    content: "Зі знижкою";
+    font-weight: 400;
+    font-size: 13px;
+    color: #bfbfbf;
+}
+
+.card__price--common {
+    font-weight: 400;
+    font-size: 17px;
+    color: #606060;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+}
+
+.card__price--common::before {
+    content: "Звичайна ціна";
+    font-weight: 400;
+    font-size: 13px;
+    color: #bfbfbf;
+}
+
+.card__title {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 150%;
+    color: #414141;
+}
+
+.card__title:hover {
+    color: #ff6633;
+}
+
+.card__add {
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    font-size: 17px;
+    color: #70c05b;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #70c05b;
+    border-radius: 4px;
+    cursor: pointer; 
+    transition: 0.2s;
+    margin-top: auto;
+}
+
+.card__add:hover, .card__add.active {
+    border: 1px solid #ff6633;
+    background-color: #ff6633;
+    color: #fff;
+}
+
+.show-cards{
+    padding: 20px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: #606060;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.show-cards:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.basket{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.basket__inner{
+    position: relative;
+}
+
+.basket__count{
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    border-radius: 50%;
+    background-color: #ff3b30;
+    color: white;
+    padding: 3px;
+    text-align: center;
+    min-width: 25px;
+}
+
+.home{
+    position: absolute;
+    top: 16px;
+    right: 60px;
+}
+
+.logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.logo-link {
+    display: block;
+}
+
+.logo-img {
+    width: 130px;
+    height: auto;
+}
+
+/* Стилі для контейнера категорії та терміну придатності */
+.card__details {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #414141;
+}
+
+.card__details b {
+    font-weight: 700;
+    color: #606060;
+}
+
+.card__details span {
+    font-weight: 400;
+    color: #414141;
+    transition: color 0.2s;
+}
+
+.card__details:hover span {
+    color: #ff6633;
+}
+/* Стилі для нових характеристик категорії та терміну придатності */
+.card__details, .product__details {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #414141;
+}
+
+.card__details b, .product__details b {
+    font-weight: 700;
+    color: #606060;
+}
+
+.card__details span, .product__details span {
+    font-weight: 400;
+    color: #414141;
+    transition: color 0.2s;
+}
+
+.card__details:hover span, .product__details:hover span {
+    color: #ff6633;
+}
+.card__category,
+.card__expiry {
+    font-size: 10px; 
+}
+.card__composition,
+.card__manufacturer {
+    font-size: 10px; 
+}
+.modal {
+    display: none; /* За замовчуванням модальне вікно приховано */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Задній фон з темністю */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Відступи відверху та знизу, автоматичний бічний відступ */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ширина модального вікна */
+}
+
+.close-order-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-order-modal:hover,
+.close-order-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.searchInput {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 60px;
+    transition: width 0.5s, border-radius 0.5s;
+    box-shadow: 0 0 0 5px #a5f1d2;
+    overflow: hidden;
+}
+
+.searchInput .icona {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.searchInput .icona::before {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border: 3px solid #0e9b71;
+    border-radius: 50%;
+    transform: translate(-2px, -2px);
+}
+
+.searchInput .icona::after {
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 12px;
+    background: #0e9b71;
+    transform: translate(8px, 8px) rotate(-45deg);
+}
+
+.searchInput.active {
+    width: 360px;
+    border-radius: 30px;
+}
+
+.searchInput .input {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    width: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.5s;
+    overflow: hidden;
+}
+
+.searchInput.active .input {
+    width: calc(100% - 60px);
+}
+
+.searchInput .input input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 18px;
+}
+.card__edit {
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    font-size: 17px;
+    color: #70c05b; /* Колір тексту */
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #70c05b; /* Колір рамки */
+    border-radius: 4px;
+    cursor: pointer; 
+    transition: 0.2s;
+    margin-top: auto;
+}
+
+.card__edit:hover, .card__edit.active {
+    border: 1px solid #ff6633; /* Колір рамки при наведенні */
+    background-color: #ff6633; /* Колір тла при наведенні */
+    color: #fff; /* Колір тексту при наведенні */
+}
+/* Сховати друге модальне вікно спочатку */
+.second-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.second-modal .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* Стилі для кнопки закриття другого модального вікна */
+.close-second-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-second-modal:hover,
+.close-second-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
